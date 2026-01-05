@@ -21,12 +21,12 @@ import (
 	"github.com/Vizualni/gobooty"
 )
 
-myBootstrappedValue = gobooty.One(func() string {
+var myBootstrappedValue = gobooty.One(func() string {
 	fmt.Println("building")
 	return "value"
 })
 
-myValueWithError = gobooty.Two(func() (string, error) {
+var myValueWithError = gobooty.Two(func() (string, error) {
 	return "", fmt.Errorf("oh no")
 })
 
